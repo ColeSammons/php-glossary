@@ -1,5 +1,5 @@
 <?php
-$title = 'foreach loop';
+$title = 'loops';
 
 $favorite_guitars = ['Vela', 'Explorer', 'Strat'];
 
@@ -20,7 +20,7 @@ $kvp_guitars = ['prs' => 'Vela', 'gibson' => 'Explorer', 'fender' => 'Strat'];
     <h1>
         <?= $title ?>
     </h1>
-    <!-- traditional -->
+    <!-- traditional foreach -->
     <table>
         <?php
         foreach ($favorite_guitars as $guitar) {
@@ -29,11 +29,33 @@ $kvp_guitars = ['prs' => 'Vela', 'gibson' => 'Explorer', 'fender' => 'Strat'];
         ?>
     </table>
     <br>
-    <!-- associative -->
+    <!-- associative foreach -->
     <table>
         <?php
         foreach ($kvp_guitars as $key => $guitar) {
             echo "<tr><td>$key</td><td>$guitar</td></tr>";
+        }
+        ?>
+    </table>
+    <br>
+    <!-- for loop -->
+    <table>
+        <?php
+        for ($i = 0; $i < count($favorite_guitars); $i++) {
+            $guitar = $favorite_guitars[$i];
+            echo "<tr><td>$guitar</td></tr>";
+        }
+        ?>
+    </table>
+    <br>
+    <!-- while loop -->
+    <table>
+        <?php
+        $i = 0;
+        while ($i < count($favorite_guitars)) {
+            $guitar = $favorite_guitars[$i];
+            echo "<tr><td>$guitar</td></tr>";
+            $i++;
         }
         ?>
     </table>
