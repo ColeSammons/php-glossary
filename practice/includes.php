@@ -1,16 +1,10 @@
 <?php
-$title = 'Includes';
+    $title = 'Includes';
 
-include('./../inc/header.php');
+    include('../inc/header.php');
+    require_once('../inc/functions.php');
 
-function output($value)
-{
-    echo '<pre>';
-    print_r($value);
-    echo '</pre>';
-}
-
-$guitars = ['Vela', 'Explorer', 'Strat'];
+    $guitars = ['Vela', 'Explorer', 'Strat'];
 
 ?>
 
@@ -19,9 +13,7 @@ $guitars = ['Vela', 'Explorer', 'Strat'];
     <?= $title ?>
 </h1>
 <?php
-output($guitars);
+    output($guitars);
 ?>
 
-</body>
-
-</html>
+<?php include('./../inc/footer.php'); ?>
