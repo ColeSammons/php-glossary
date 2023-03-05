@@ -1,0 +1,34 @@
+<?php
+    $title = 'Get Input';
+
+    include('../inc/header.php');
+    require_once('../inc/functions.php');
+
+    $category = filter_input(INPUT_GET, 'category', FILTER_VALIDATE_INT);
+    $limit = filter_input(INPUT_GET, 'limit', FILTER_VALIDATE_INT);
+
+    if($category == false) {
+        $category = 1;
+    }
+    if($limit == false) {
+        $limit = 10;
+    }
+
+    // function setValues() {
+    //     global $category, $limit;
+
+    //     $category = $_GET['category'];
+    //     $limit = $_GET['limit'];
+    // }
+    // setValues();
+?>
+
+
+<h1>
+    <?= $title ?>
+</h1>
+<p>Showing category: <?= $category; ?></p>
+<p>Showing limit: <?= $limit; ?></p>
+
+
+<?php include('./../inc/footer.php'); ?>

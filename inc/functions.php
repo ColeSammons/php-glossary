@@ -1,4 +1,8 @@
 <?php
+    /** 
+     * @param $value string to be printed
+     * 
+     */
     function output($value)
     {
         echo '<pre>';
@@ -12,6 +16,10 @@
         return $result;
     }
     
+    /** 
+     * @param $arr array of data
+     * 
+     */
     function pluck($arr, $key)
     {
         $result = array_map(function($item) use($key) {
