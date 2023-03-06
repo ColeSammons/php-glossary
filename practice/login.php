@@ -17,7 +17,7 @@
         output($_POST);
     }
 
-     // Good for multiple forms
+     /// Good for multiple forms
     //  if(isset($_POST['login'])) {
     //     // retreives from the name of input
     //     $_POST['email'];
